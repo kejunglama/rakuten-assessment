@@ -1,6 +1,6 @@
 import { Typography, Grid, Card, CardContent, CardMedia } from "@mui/material";
 interface CatalogItemProps {
-  item: string;
+  item: object;
 }
 
 const CatalogItem: React.FC<CatalogItemProps> = ({ item }) => {

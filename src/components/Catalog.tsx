@@ -2,7 +2,7 @@ import CatalogItem from "./CatalogItem";
 import { Grid, Typography } from "@mui/material";
 
 interface CatalogProps {
-  items: string[];
+  items: object[];
 }
 
 const Catalog: React.FC<CatalogProps> = ({ items }) => {
@@ -19,7 +19,7 @@ const Catalog: React.FC<CatalogProps> = ({ items }) => {
         alignItems={"center"}
       >
         {items && items.length > 0 ? (
-          items.map((item: string, index: number) => (
+          items.map((item: object, index: number) => (
             <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
               <CatalogItem item={item} />
             </Grid>

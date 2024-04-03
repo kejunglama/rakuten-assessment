@@ -4,14 +4,14 @@ export const theme = createTheme({
   typography: {
     fontFamily: "Poppins, roboto, sans-serif",
     h3: {
-      fontSize: "30px",
+      fontSize: 30,
     },
     body2: {
-      fontSize: "12px",
+      fontSize: 12,
       color: "#696969",
     },
     body1: {
-      fontSize: "14px",
+      fontSize: 14,
       color: "#333",
     },
   },

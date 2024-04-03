@@ -1,11 +1,4 @@
-import {
-  Typography,
-  Grid,
-  Card,
-  CardContent,
-  CardMedia,
-  Link,
-} from "@mui/material";
+import { Typography, Grid, Card, CardContent, CardMedia } from "@mui/material";
 interface CatalogItemProps {
   item: string;
 }
@@ -34,6 +27,7 @@ const CatalogItem: React.FC<CatalogItemProps> = ({ item }) => {
         style={{ textDecoration: "none", color: "inherit" }}
       >
         <Grid container justifyContent="center" alignItems="center">
+          {/* Image */}
           <Grid item xs={4} display={"flex"} justifyContent={"center"}>
             <CardMedia
               component="img"
@@ -42,6 +36,7 @@ const CatalogItem: React.FC<CatalogItemProps> = ({ item }) => {
               sx={{ objectFit: "contain", height: "120px", width: "120px" }}
             />
           </Grid>
+          {/* Content */}
           <Grid item xs={8}>
             <CardContent>
               <Typography variant="body2">{product.brand}</Typography>
@@ -49,16 +44,10 @@ const CatalogItem: React.FC<CatalogItemProps> = ({ item }) => {
                 {product.title}
               </Typography>
               <Typography variant="body1">{product.price}</Typography>
-              {/* <Typography variant="body1" color="text.secondary">
-              {product.href}
-            </Typography> */}
               <Typography
                 variant="body1"
                 color="text.primary"
-                style={{
-                  fontSize: 20,
-                  fontWeight: "bolder",
-                }}
+                style={{ fontSize: 20, fontWeight: "bolder" }}
               >
                 {product.newPrice}
                 <span style={{ fontSize: 12 }}> Neuf</span>
